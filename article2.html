@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylearticle2.css">
+    <title>Understanding Cat Behavior - WhiskerWhisper</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo"><a href="index.html">WhiskerWhisper</a></div>
+        <span class="toggle">&#9776;</span>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Adopt.html">Adopt</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="Articles.html">Articles</a></li>
+                <li><a href="Donation.html">Donate</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+
+       <!-- Title -->
+       <div class="section-title">
+        <h2>Cat Articles</h2>
+        <p class="section-subtitle">Explore the world of cats!</p>
+    </div>
+
+
+    <!-- Article -->
+    <div class="article-container">
+        <div class="article-title">
+            <h1>Understanding Cat Behavior: Why Do Cats Knead?</h1>
+            <p class="article-date">Published on October 11, 2024 | Author: XXX</p>
+        </div>
+
+        <img src="cat3.jpg" alt="Cat Care" class="article-image">
+
+        <div class="article-content">
+            <p>
+                If you’re a cat owner, you’ve probably seen your furry friend kneading on soft surfaces, like a blanket, your lap, or even a pillow. This rhythmic action where cats push their paws in and out against an object is both adorable and puzzling. But what exactly is kneading, and why do cats do it?
+            </p>
+
+            <h2>What Is Kneading?</h2>
+            <p>
+                Kneading is a natural behavior observed in many cats. Often referred to as "making biscuits" due to its resemblance to dough kneading, it’s believed to be a leftover instinct from kittenhood. When kittens nurse, they knead their mother's belly to stimulate milk flow.
+            </p>
+
+            <h2>Reasons Cats Knead</h2>
+            <ul>
+                <li>
+                    <strong>Comfort and Contentment:</strong> Many cats knead when they are relaxed or happy. You might notice this behavior when your cat is snuggling in a cozy spot or getting a good petting session.
+                </li>
+                <li>
+                    <strong>Marking Territory:</strong> Cats have scent glands in their paws. When they knead, they may be marking their territory, spreading their unique scent on the object they’re kneading.
+                </li>
+                <li>
+                    <strong>Preparing a Nest:</strong> In the wild, cats knead soft surfaces like grass to make a comfortable nest for sleeping or giving birth.
+                </li>
+                <li>
+                    <strong>Comfort from Kittenhood:</strong> As kneading is closely associated with nursing, it may provide adult cats with a sense of security or nostalgia.
+                </li>
+            </ul>
+
+            <h2>Is It a Sign of Affection?</h2>
+            <p>
+                Yes! When your cat kneads on your lap, it’s often a sign that they feel safe, comfortable, and bonded with you. Consider it a compliment – your cat is showing love and affection by including you in this comforting behavior.
+            </p>
+
+            <h2>Should You Be Concerned?</h2>
+            <p>
+                In general, kneading is a harmless and normal behavior. However, if your cat becomes too aggressive with their kneading or starts using their claws, you can gently redirect them to a blanket or pillow. Trimmed claws can also help minimize any discomfort.
+            </p>
+
+            <h2>Conclusion</h2>
+            <p>
+                While kneading might seem odd at first, it’s a comforting and instinctual behavior for cats. Whether they’re showing affection, marking their territory, or reminiscing about their kitten days, it’s one of the many ways your cat expresses themselves.
+            </p>
+        </div>
+    </div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-section contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:info@whiskerwhisper.com">info@whiskerwhisper.com</a></p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: Jl. Meow Avenue, No. 123, Cat City</p>
+    </div>
+    <div class="footer-section copyright">
+        <p>&copy; 2024 WhiskerWhisper. All Rights Reserved.</p>
+    </div>
+</div>
+</footer>
+
+
+    <script>
+        const toggle = document.querySelector('.toggle');
+        const menu = document.querySelector('.menu');
+        const overlay = document.querySelector('.overlay');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            menu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

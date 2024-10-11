@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleadopt.css">
+    <title>Cat Adoption - WhiskerWhisper</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo"><a href="#">WhiskerWhisper</a></div>
+        <span class="toggle">&#9776;</span>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Adopt.html">Adopt</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="Donation.html">Donate</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+
+<!-- Title -->
+<div class="section-title">
+    <h2>Meet Our Cats</h2>
+    <p class="section-subtitle">We Need New Family</p>
+</div>
+
+            <!-- Search Filter -->
+            <div class="filter-section">
+                <h3>Search Filter</h3>
+                <div>
+                    <label for="age">Age:</label>
+                    <select id="age">
+                        <option value="">All</option>
+                        <option value="kitten">Kitten</option>
+                        <option value="adult">Adult Cat</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="gender">Gender:</label>
+                    <select id="gender">
+                        <option value="">All</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="special-needs">Special Needs:</label>
+                    <select id="special-needs">
+                        <option value="">All</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <button type="button" id="filter-button">Apply Filter</button>
+            </div>
+
+            <!-- Cat Grid -->
+            <div class="cat-grid" id="cat-grid">
+                <div class="cat-card" data-age="kitten" data-gender="male" data-special-needs="no">
+                    <img src="cat1.jpg" alt="Simba">
+                    <h3>Simba</h3>
+                    <p>
+                        <strong>Age:</strong> 4 months<br>
+                        <strong>Gender:</strong> Male<br>
+                        <strong>Special Needs:</strong> No<br>
+                        <strong>Description:</strong> An energetic and playful kitten who loves to explore.
+                    </p>
+                    <a href="https://whatsapp.com" class="btn">Adopt Now</a>
+                </div>
+                <div class="cat-card" data-age="adult" data-gender="female" data-special-needs="yes">
+                    <img src="cat2.jpg" alt="Luna">
+                    <h3>Luna</h3>
+                    <p>
+                        <strong>Age:</strong> 2 years<br>
+                        <strong>Gender:</strong> Female<br>
+                        <strong>Special Needs:</strong> Yes (special diet)<br>
+                        <strong>Description:</strong> A calm and loving cat who needs a special diet for sensitive skin.
+                    </p>
+                    <a href="https://whatsapp.com" class="btn">Adopt Now</a>
+                </div>
+                <div class="cat-card" data-age="kitten" data-gender="female" data-special-needs="no">
+                    <img src="cat3.jpg" alt="Charlie">
+                    <h3>Charlie</h3>
+                    <p>
+                        <strong>Age:</strong> 5 months<br>
+                        <strong>Gender:</strong> Female<br>
+                        <strong>Special Needs:</strong> No<br>
+                        <strong>Description:</strong> A lively kitten full of energy and curiosity.
+                    </p>
+                    <a href="https://whatsapp.com" class="btn">Adopt Now</a>
+                </div>
+                <div class="cat-card" data-age="adult" data-gender="male" data-special-needs="yes">
+                    <img src="cat4.jpg" alt="Bella">
+                    <h3>Bella</h3>
+                    <p>
+                        <strong>Age:</strong> 3 years<br>
+                        <strong>Gender:</strong> Female<br>
+                        <strong>Special Needs:</strong> Yes (mobility support)<br>
+                        <strong>Description:</strong> A resilient cat looking for a loving home that understands her mobility needs.
+                    </p>
+                    <a href="https://whatsapp.com" class="btn">Adopt Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-section contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:info@whiskerwhisper.com">info@whiskerwhisper.com</a></p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: Jl. Meow Avenue, No. 123, Cat City</p>
+    </div>
+    <div class="footer-section copyright">
+        <p>&copy; 2024 WhiskerWhisper. All Rights Reserved.</p>
+    </div>
+</div>
+</footer>
+
+    <script>
+        const toggle = document.querySelector('.toggle');
+        const menu = document.querySelector('.menu');
+        const overlay = document.querySelector('.overlay');
+        const filterButton = document.getElementById('filter-button');
+        const catCards = document.querySelectorAll('.cat-card');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            menu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        filterButton.addEventListener('click', () => {
+            const ageFilter = document.getElementById('age').value;
+            const genderFilter = document.getElementById('gender').value;
+            const specialNeedsFilter = document.getElementById('special-needs').value;
+
+            catCards.forEach(card => {
+                const matchesAge = ageFilter === "" || card.getAttribute('data-age') === ageFilter;
+                const matchesGender = genderFilter === "" || card.getAttribute('data-gender') === genderFilter;
+                const matchesSpecialNeeds = specialNeedsFilter === "" || card.getAttribute('data-special-needs') === specialNeedsFilter;
+
+                if (matchesAge && matchesGender && matchesSpecialNeeds) {
+                    card.style.display = 'block'; // Show card if matches
+                } else {
+                    card.style.display = 'none'; // Hide card if not matching
+                }
+            });
+        });
+    </script>
+</body>
+</html>

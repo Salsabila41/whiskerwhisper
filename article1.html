@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylearticle.css">
+    <title>Cat Articles - WhiskerWhisper</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo"><a href="#">WhiskerWhisper</a></div>
+        <span class="toggle">&#9776;</span>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="donation.html">Donate</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <!-- Title -->
+    <div class="section-title">
+        <h2>Cat Articles</h2>
+        <p class="section-subtitle">Explore the world of cats!</p>
+    </div>
+
+    <!-- Article -->
+    <div class="article-container">
+        <h1>The Ultimate Guide to Caring for Your Cat</h1>
+        <p class="article-meta">Published on: October 11, 2024 | Author: XXX</p>
+
+        <img src="cat1.jpg" alt="Cat Care" class="article-image">
+
+        <p>Cats are wonderful companions known for their independence and unique personalities. Whether you are a new cat owner or a seasoned one, understanding your cat’s needs is crucial for a happy and healthy relationship.</p>
+
+        <h2>1. Nutrition</h2>
+        <p>One of the most important aspects of cat care is providing proper nutrition. Cats are obligate carnivores, meaning they require a diet rich in animal-based proteins. Avoid feeding your cat too many carbohydrates or grains, as these can lead to health issues over time.</p>
+
+        <h2>2. Grooming</h2>
+        <p>While cats are excellent self-groomers, regular brushing helps reduce shedding and prevents hairballs. Long-haired cats may need grooming more frequently, especially during shedding seasons.</p>
+
+        <h2>3. Regular Vet Visits</h2>
+        <p>Taking your cat to the vet for regular check-ups is essential. Your vet can ensure your cat is up-to-date on vaccinations and spot any potential health issues before they become serious problems.</p>
+
+        <h2>4. Play and Exercise</h2>
+        <p>Playtime is critical for your cat’s mental and physical health. Interactive toys, scratching posts, and climbing trees are great ways to keep your cat engaged and active.</p>
+
+        <h2>5. Understanding Behavior</h2>
+        <p>Cats communicate in subtle ways. Understanding your cat’s body language, vocalizations, and habits can help you strengthen your bond and meet their needs effectively.</p>
+
+        <div class="quote-box">
+            <p>"Cats may be quiet, but they have a lot to say through their actions and expressions."</p>
+        </div>
+
+        <h2>Conclusion</h2>
+        <p>By providing proper care, attention, and love, you can ensure that your cat thrives as a beloved member of your family. Happy cats make happy homes!</p>
+
+        <div class="article-footer">
+            <p>For more cat care tips and tricks, explore our other articles at <a href="#">WhiskerWhisper</a>.</p>
+        </div>
+    </div
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:info@whiskerwhisper.com">info@whiskerwhisper.com</a></p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: Jl. Meow Avenue, No. 123, Cat City</p>
+        </div>
+        <div class="footer-section copyright">
+            <p>&copy; 2024 WhiskerWhisper. All Rights Reserved.</p>
+        </div>
+    </div>
+    </footer>
+    
+
+    <script>
+        const toggle = document.querySelector('.toggle');
+        const menu = document.querySelector('.menu');
+        const overlay = document.querySelector('.overlay');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            menu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
