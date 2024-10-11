@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhiskerWhisper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <a href="#">WhiskerWhisper</a>
+        </div>
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Adopt.html">Adopt</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="Donation.html">Donate</a></li>
+            </ul>
+        </div>
+        <div class="toggle" id="toggle-btn">&#9776;</div> 
+    </nav>
+
+    <div class="overlay" id="overlay"></div> 
+
+    <div class="container">
+
+        <!-- Opening -->
+        <div class="home-banner">
+            <img src="banner.jpg" alt="Selamat datang di WhiskerWhisper">
+            <h1>WELCOME TO WHISKERWHISPER!</h1>
+        </div>
+    
+
+       <section class="adoption">
+    <h2>Find Your Puurrrfect Match!</h2>
+    <div class="adoption-slider">
+
+        <!-- Kartu kucing untuk diadopsi -->
+        <div class="cat-card">
+            <img src="cat1.jpg" alt="Kucing 1">
+            <h3>Mimi</h3>
+            <p>Cheerful and active 3 month old kitten.</p>
+        </div>
+        <div class="cat-card">
+            <img src="cat2.jpg" alt="Kucing 2">
+            <h3>Koko</h3>
+            <p>Friendly and affectionate adult male cat.</p>
+        </div>
+        <div class="cat-card">
+            <img src="cat3.jpg" alt="Kucing 3">
+            <h3>Luna</h3>
+            <p>Ka fluffy female cat looking for a new family.</p>
+        </div>
+
+
+        <div class="see-more">
+            <a href="Adopt.html">See More</a>
+        </div>
+    </div>
+        </section>
+
+
+        <section class="adoption">
+            <h2>Calender Events</h2>
+            <div class="adoption-slider">
+
+                <!-- Kartu Events -->
+                <div class="cat-card">
+                    <img src="catday.jpg" alt="Kucing 1">
+                    <h3>CAT DAY</h3>
+                    <p>📅 Date: [Enter event date]
+                        📍 Location: [Enter event location]</p>
+                </div>
+                <div class="cat-card">
+                    <img src="catday.jpg" alt="Kucing 2">
+                    <h3>CATDAY</h3>
+                    <p>📅 Date: [Enter event date]
+                        📍 Location: [Enter event location]</p>
+                </div>
+                <div class="cat-card">
+                    <img src="catday.jpg" alt="Kucing 3">
+                    <h3>CAT DAY</h3>
+                    <p>📅 Date: [Enter event date]
+                        📍 Location: [Enter event location]</p>
+                </div>
+             
+                <div class="see-more">
+                    <a href="Events.html">See More</a>
+                </div>
+            </div>
+                </section>
+
+
+            <div class="column">
+                <h2>What's New in Cat World?</h2>
+                <div class="article-list">
+                    <div class="article">
+                        <h3>The Ultimate Guide to Caring for Your Cat</h3>
+                        <p>Discover the best ways to keep your cat healthy and happy!</p>
+                        <a href="article1.html">Read more</a>
+                    </div>
+                    <div class="article">
+                        <h3>Understanding Cat Behavior: Why Do Cats Knead?</h3>
+                        <p>Unveiling the instincts, comfort, and communication behind Cats’ kneading behavior</p>
+                        <a href="article2.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+<!-- Footer -->
+<footer class="footer">
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:info@whiskerwhisper.com">info@whiskerwhisper.com</a></p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: Jl. Meow Avenue, No. 123, Cat City</p>
+        </div>
+        <div class="footer-section copyright">
+            <p>&copy; 2024 WhiskerWhisper. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        const menu = document.getElementById("menu");
+        const toggleBtn = document.getElementById("toggle-btn");
+        const overlay = document.getElementById("overlay");
+
+        toggleBtn.onclick = function() {
+            menu.classList.toggle("active");
+            overlay.classList.toggle("active");
+        }
+
+
+        overlay.onclick = function() {
+            menu.classList.remove("active");
+            overlay.classList.remove("active");
+        }
+    </script>
+</body>
+</html>
